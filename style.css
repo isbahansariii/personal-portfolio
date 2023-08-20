@@ -1,0 +1,316 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-sizing: border-box;
+}
+
+span.highlight {
+    background-color: #052db1;
+    color: #b3f3f5c7;
+    !important
+}
+
+/* HOME section */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+}
+
+/* CONTENT section */
+.home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+}
+
+.home-content::before {
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    background-color: #17a6ca;
+    opacity: 0.35;
+}
+
+/* CONTENT-BOX */
+.content-box {
+    width: 40vw;
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.content-box:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out 0.2s;
+    transform: scale(1.05);
+}
+
+/* ANIMATION FOR TEXT */
+.animate {
+    display: inline-flex;
+}
+
+.fixed-text {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.moving-text {
+    margin-left: 0.25rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+}
+
+.moving-text li {
+    list-style: none;
+    color: #021e7c;
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: relative;
+    top: 0;
+    animation: move 6s steps(2) infinite;
+}
+
+@keyframes move {
+    100% {
+        top: -3rem;
+    }
+}
+
+.moving-text li span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #055b7e48;
+    border-left: 2px solid #021e7c;
+    animation: type 1.5s steps(10) infinite;
+}
+
+@keyframes type {
+    100% {
+        content: '';
+        color: #021e7c;
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+/* IMAGE */
+.home-image {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    right: 10%;
+}
+
+.img {
+    background-image: url("./images/Isbah\ Ansari\ Pic.jpg");
+    background-size: cover;
+    opacity: 0.7;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 2px solid #74dde0c7;
+}
+
+.img:hover {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out 0.2s;
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #05164d;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+/* NAVBAR BOX-1 LOGO */
+.nav-logo {
+    display: flex;
+    width: 7rem;
+    height: 4vh;
+    color: #ffffff;
+    font-size: 1rem;
+    padding-left: 5px;
+}
+
+.nav-logo i {
+    font-size: 1.5rem;
+    color: #052db1;
+    background-color: white;
+    width: 1.3rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+/* NAVBAR BOX-2 CONTENT */
+.nav-cont {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60rem;
+    height: 1.5rem;
+}
+.nav-cont li a:active{
+    color:#17a6ca;
+}
+.navbar li {
+    list-style: none;
+}
+
+.navbar li a {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+/* EXPERIENCE */
+#experience{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("./images/experience.jpg");
+    background-size: cover;
+}
+.exp-content{
+    background-color: #1f5052c7;
+    position: relative;
+    color: #ffffff;
+}
+
+/* EDUCATION */
+#education{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("./images/education.jpg");
+    background-size: cover;
+}
+.edu-content{
+    padding: 0 10px 0 10px;
+    background-color: #61470f70;
+    position: relative;
+    color: #ffffff;
+}
+.edu-content h1{
+    font-size: 1.5rem;
+}
+
+/* Account */
+#account{
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    background-image: url("./images/account.jpg");
+    background-size: cover;
+}
+.acc-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    color: #ffffff;
+}
+.acc-content li{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 12rem;
+    border-radius: 30px;
+    background-color: #05164d;
+    line-height: 2rem;
+    height: 3rem;
+    list-style: none;
+}
+.acc-content li:hover{
+    transform: scale(1.2);
+    transition: all 1s ease-in-out 0.25s;
+}
+.acc-content li a{                                
+    font-size: 200%;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* PROJECT */
+#project{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("./images/project.jpg");
+    background-size: cover;
+}
+.proj-content{
+    position: relative;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+
+    /* MOVING CONTENT OF  Animate*/
+    .moving-text{
+        width: 15rem;
+    }
+    .moving-text li {
+        animation: move 6s steps(2) infinite;
+    }
+    /* IMAGE */
+    .home-image {
+        width: 10rem;
+        height: 10rem;
+        right: 10%;
+        top: 20%;
+    }
+    .img {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    /* NAVBAR BOX-2 CONTENT */
+    .nav-cont {
+        flex-wrap: wrap;
+    }
+
+    /* Account */
+    .acc-content{
+        flex-direction: column;
+    }
+    .acc-content li{
+        margin-top: 20px;
+    }
+
+    /* Education */
+    .edu-content h1{
+        font-size: 1.2rem;
+    }
+    .edu-content p{
+        font-size: 0.9rem;
+    }
+}
